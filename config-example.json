@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "ai": {
+    "provider": "deepseek",
+    "model": "deepseek-chat",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.3,
+    "max_tokens": 4096
+  },
+  "scoring": {
+    "threshold": 5.0,
+    "note": "从默认 7.0 调低到 5.0，让更多内容通过筛选。适合想多看一些信息的场景"
+  },
+  "output": {
+    "github_pages": false,
+    "local_markdown": true,
+    "markdown_dir": "data/summaries/",
+    "obsidian_symlink": "~/myzoe/mybiji/Horizon日报/"
+  },
+  "sources": {
+    "rss": [
+      { "name": "LWN.net", "url": "https://lwn.net/headlines/rss", "enabled": true },
+      { "name": "Hacker News", "url": "https://hnrss.org/frontpage", "enabled": true },
+      { "name": "IT之家", "url": "https://www.ithome.com/rss/", "enabled": true },
+      { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "enabled": true },
+      { "name": "TechCrunch", "url": "https://techcrunch.com/feed/", "enabled": true }
+    ],
+    "reddit": [
+      { "subreddit": "artificial", "enabled": true },
+      { "subreddit": "MachineLearning", "enabled": true },
+      { "subreddit": "rust", "enabled": true },
+      { "subreddit": "linux", "enabled": true },
+      { "subreddit": "programming", "enabled": true },
+      { "subreddit": "netsec", "enabled": true },
+      { "subreddit": "opensource", "enabled": true }
+    ],
+    "github": [
+      { "type": "trending", "language": "", "since": "daily", "enabled": true }
+    ]
+  },
+  "_note": "以上为示例配置，实际 API Key 等敏感信息存在 .env 文件中，不提交到仓库"
+}
